@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainers & Subscription | Fitness Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script defer src="script.js"></script>
+    
+    
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">FitnessClub</div>
+        <ul class="nav-links">
+            <li><a href="Home.html" class="active">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Workout.html">Workout</a></li>
+            <li><a href="Trainer.html">Trainer</a></li>
+            <li><a href="gellary.html">Gallery</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="Payment.html">Payment</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <button class="login-btn">Login</button>
+            <i class="fas fa-shopping-cart"></i>
+            <div class="hamburger">
+                <span>Home</span>
+                <span>About</span>
+                <span>Workout</span>
+                <span>Diet</span>
+                <span>Live Class</span>
+                <span>Gellary</span>
+                <span>Shop</span>
+                <span>Payment</span>
+                <span>Login</span>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Fitness Journey</h1>
+            <p>Join us and transform your body with expert training and nutrition.</p>
+            <button class="cta-btn">Get Started</button>
+        </div>
+    </section>
+    
+
+    <h1>Meet Our Trainers</h1>
+    
+    <!-- Trainer Profiles -->
+    <div class="trainers-container">
+        <div class="trainer-card">
+            <img src="images/trainer-1.jpg" alt="Trainer 1">
+            <h3>Sarah Johnson</h3>
+            <p>Yoga & Flexibility Expert</p>
+            <button onclick="bookTrainer('Sarah Johnson')">Book Now</button>
+        </div>
+        <div class="trainer-card">
+            <img src="images/trainer-2.jpg" alt="Trainer 2">
+            <h3>Mark Smith</h3>
+            <p>HIIT & Strength Coach</p>
+            <button onclick="bookTrainer('Mark Smith')">Book Now</button>
+        </div>
+        <div class="trainer-card">
+            <img src="images/trainer-3.jpg" alt="Trainer 3">
+            <h3>Emma Williams</h3>
+            <p>Cardio & Fat Loss Specialist</p>
+            <button onclick="bookTrainer('Emma Williams')">Book Now</button>
+        </div>
+        <div class="trainer-card">
+            <img src="images/trainer-4.jpg" alt="Trainer 4">
+            <h3>James Brown</h3>
+            <p>Bodybuilding & Nutrition Expert</p>
+            <button onclick="bookTrainer('James Brown')">Book Now</button>
+        </div>
+        <div class="trainer-card">
+            <img src="images/trainer11.jpg" alt="Trainer 5">
+            <h3>Olivia Martinez</h3>
+            <p>Pilates & Posture Trainer</p>
+            <button onclick="bookTrainer('Olivia Martinez')">Book Now</button>
+        </div>
+        <div class="trainer-card">
+            <img src="images/trainer12.jpg" alt="Trainer 6">
+            <h3>David Wilson</h3>
+            <p>Endurance & Marathon Coach</p>
+            <button onclick="bookTrainer('David Wilson')">Book Now</button>
+        </div>
+    </div>
+
+    <h2>Choose Your Subscription Plan</h2>
+
+    <!-- Subscription Plans -->
+    <div class="subscription-container">
+        <div class="plan">
+            <h3>Basic Plan</h3>
+            <p>Access to limited workouts & 1 trainer session/month</p>
+            <p class="price">$9.99/month</p>
+            <button onclick="subscribe('Basic')" onclick="proceedToPayment()">Subscribe</button>
+        </div>
+        <div class="plan">
+            <h3>Standard Plan</h3>
+            <p>Full workout library & 4 trainer sessions/month</p>
+            <p class="price">$19.99/month</p>
+            <button onclick="subscribe('Standard')" onclick="proceedToPayment()">Subscribe</button>
+        </div>
+        <div class="plan">
+            <h3>Premium Plan</h3>
+            <p>All features + unlimited trainer sessions</p>
+            <p class="price">$29.99/month</p>
+            <button onclick="subscribe('Premium')" onclick="proceedToPayment()">Subscribe</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Your trusted online fitness club for live classes, personalized training, and wellness coaching.</p>
+            </div>
+    
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Classes</a></li>
+                    <li><a href="#">Trainers</a></li>
+                    <li><a href="#">Membership</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Fitness Street, New York, USA</p>
+                <p><i class="fas fa-envelope"></i> support@fitnessclub.com</p>
+                <p><i class="fas fa-phone"></i> +1 (234) 567-890</p>
+            </div>
+    
+            <div class="footer-section newsletter">
+                <h2>Subscribe to Newsletter</h2>
+                <form action="#">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>© 2025 Fitness Club. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function bookTrainer(trainer) {
+            alert('You have booked a session with ' + trainer + '!');
+            // Here you can redirect to booking page or send a request to the server
+        }
+
+        function subscribe(plan) {
+            alert('You have subscribed to the ' + plan + ' plan!');
+            // Here you can handle subscription payments
+        }
+    </script>
+
+</body>
+</html>

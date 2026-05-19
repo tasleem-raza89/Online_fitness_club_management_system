@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Payment System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Fake Payment System</h2>
+
+    <!-- Checkout Payment Form -->
+    <div class="payment-container">
+        <h3>Checkout Payment</h3>
+        <input type="text" id="checkout-mobile" placeholder="Enter Mobile Number">
+        <button onclick="requestOTP('checkout')">Proceed to Pay</button>
+    </div>
+
+    <!-- Subscription Payment Form -->
+    <div class="payment-container">
+        <h3>Subscription Payment</h3>
+        <input type="text" id="subscription-mobile" placeholder="Enter Mobile Number">
+        <button onclick="requestOTP('subscription')">Subscribe</button>
+    </div>
+
+    <!-- OTP Verification Modal -->
+    <div id="otp-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Enter OTP</h3>
+            <input type="text" id="otp-input" placeholder="Enter OTP">
+            <button onclick="verifyOTP()">Verify OTP</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

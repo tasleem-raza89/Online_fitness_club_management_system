@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Online Shop</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script defer src="script.js"></script>
+    
+    
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">FitnessClub</div>
+        <ul class="nav-links">
+            <li><a href="Home.html" class="active">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Workout.html">Workout</a></li>
+            <li><a href="Trainer.html">Trainer</a></li>
+            <li><a href="gellary.html">Gallery</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="Payment.html">Payment</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <button class="login-btn">Login</button>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+            <div class="hamburger">
+                <span>Home</span>
+                <span>About</span>
+                <span>Workout</span>
+                <span>Diet</span>
+                <span>Live Class</span>
+                <span>Gellary</span>
+                <span>Shop</span>
+                <span>Payment</span>
+                <span>Login</span>
+
+
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Fitness Journey</h1>
+            <p>Join us and transform your body with expert training and nutrition.</p>
+            <button class="cta-btn">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Icon -->
+    
+    <div class="cart-container" id="cart">
+        <h2>Shopping Cart <i class="fas fa-times close-cart" onclick="toggleCart()"></i></h2>
+        <div id="cart-items"></div>
+        <p class="cart-total">Total: $<span id="cart-total">0.00</span></p>
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+    
+
+    <h1>Fitness Online Shop</h1>
+
+    <!-- Product Section -->
+    <div class="shop-container">
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <img src="images/download (1).jpg" alt="Protein Powder">
+                <div class="product-overlay">
+                    <h3>Protein Powder</h3>
+                    <p class="price">$29.99</p>
+                    <p>Boost muscle growth & recovery</p>
+                    <button onclick="addToCart('Protein Powder', 29.99)">Add to Cart</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <img src="images/download (3).jpg" alt="Protein Powder">
+                <div class="product-overlay">
+                    <h3>Protein Powder</h3>
+                    <p class="price">$29.99</p>
+                    <p>Boost muscle growth & recovery</p>
+                    <button onclick="addToCart('Protein Powder', 29.99)">Add to Cart</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <img src="images/download4.jpg" alt="Protein Powder">
+                <div class="product-overlay">
+                    <h3>Protein Powder</h3>
+                    <p class="price">$29.99</p>
+                    <p>Boost muscle growth & recovery</p>
+                    <button onclick="addToCart('Protein Powder', 29.99)">Add to Cart</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <img src="images/download(5).jpg" alt="Protein Powder">
+                <div class="product-overlay">
+                    <h3>Protein Powder</h3>
+                    <p class="price">$29.99</p>
+                    <p>Boost muscle growth & recovery</p>
+                    <button onclick="addToCart('Protein Powder', 29.99)">Add to Cart</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <img src="images/download.jpg" alt="Protein Powder">
+                <div class="product-overlay">
+                    <h3>Protein Powder</h3>
+                    <p class="price">$29.99</p>
+                    <p>Boost muscle growth & recovery</p>
+                    <button onclick="addToCart('Protein Powder', 29.99)">Add to Cart</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <img src="images/download (1).jpg" alt="Protein Powder">
+                <div class="product-overlay">
+                    <h3>Protein Powder</h3>
+                    <p class="price">$29.99</p>
+                    <p>Boost muscle growth & recovery</p>
+                    <button onclick="addToCart('Protein Powder', 29.99)">Add to Cart</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="cart-container" id="cart">
+        <h2>Shopping Cart</h2>
+        <div id="cart-items"></div>
+        <p class="cart-total">Total: $<span id="cart-total">0.00</span></p>
+        <button class="checkout-btn" onclick="checkout()" href="Payment.html">Checkout</button>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Your trusted online fitness club for live classes, personalized training, and wellness coaching.</p>
+            </div>
+    
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Classes</a></li>
+                    <li><a href="#">Trainers</a></li>
+                    <li><a href="#">Membership</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Fitness Street, New York, USA</p>
+                <p><i class="fas fa-envelope"></i> support@fitnessclub.com</p>
+                <p><i class="fas fa-phone"></i> +1 (234) 567-890</p>
+            </div>
+    
+            <div class="footer-section newsletter">
+                <h2>Subscribe to Newsletter</h2>
+                <form action="#">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>© 2025 Fitness Club. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function proceedToPayment() {
+    let totalAmount = document.getElementById('cart-total').innerText;
+    
+    if (totalAmount === "0.00") {
+        alert("Your cart is empty! Please add items.");
+        return;
+    }
+
+    // Redirect to a payment gateway or a payment page
+    window.location.href = `payment.html?amount=${totalAmount}`;
+}
+
+    </script>
+
+</body>
+</html>
